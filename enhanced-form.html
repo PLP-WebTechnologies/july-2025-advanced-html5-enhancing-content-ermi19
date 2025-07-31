@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Enhanced HTML5 Content &amp; Mastering Forms</title>
+  <meta name="description" content="Demonstration of enhanced HTML5 content using lists, tables, media, and a fully accessible, validated HTML5 form." />
+</head>
+<body>
+
+  <header>
+    <h1>Enhanced HTML5 Content &amp; Mastering Forms</h1>
+    <nav aria-label="Primary navigation">
+      <ul>
+        <li><a href="#content-sections">Content Sections</a></li>
+        <li><a href="#form-section">User Information Form</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="content-sections" aria-labelledby="content-heading">
+      <h2 id="content-heading">Content Enhancement Examples</h2>
+
+      <!-- Lists -->
+      <article>
+        <h3>Useful Features of HTML5</h3>
+        <p>HTML5 introduces many new elements and attributes for better semantics and usability:</p>
+        <ul>
+          <li>Semantic elements to organize content meaningfully</li>
+          <li>Native multimedia support with <code>&lt;audio&gt;</code> and <code>&lt;video&gt;</code></li>
+          <li>New form input types and validation features</li>
+          <li>Improved accessibility features</li>
+          <li>Custom data attributes for storing extra information</li>
+        </ul>
+      </article>
+
+      <!-- Tables -->
+      <article>
+        <h3>Sample Data Table</h3>
+        <p>This table presents a comparison of HTML5 input types and their use cases:</p>
+        <table border="1" summary="Comparison of HTML5 input types">
+          <caption>HTML5 Input Types</caption>
+          <thead>
+            <tr>
+              <th>Input Type</th>
+              <th>Description</th>
+              <th>Validation Example</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>email</td>
+              <td>Accepts email addresses</td>
+              <td>Format: ermiyasgera@gmail.com</td>
+            </tr>
+            <tr>
+              <td>number</td>
+              <td>Accepts numeric input</td>
+              <td>Example: min=1, max=10</td>
+            </tr>
+            <tr>
+              <td>url</td>
+              <td>Accepts web URLs</td>
+              <td>Format: https://ermiyasgera.com</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+
+      <!-- Media -->
+      <article>
+        <h3>Embedded Media Example</h3>
+        <figure>
+          <img src="https://www.ermiyasgera.com/400x200" alt="Sample placeholder image representing multimedia" />
+          <figcaption>Example of an image used to enrich content.</figcaption>
+        </figure>
+
+        <figure>
+          <video controls width="400" aria-label="Sample video demonstration">
+            <source src="NoVideoUploaded.mp4" type="video/mp4" />
+            Your browser does not support the video element.
+          </video>
+          <figcaption>Example of embedded video content.</figcaption>
+        </figure>
+
+        <figure>
+          <audio controls aria-label="Sample audio demonstration">
+            <source src="NoAudioUploaded.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+          <figcaption>Example of embedded audio content.</figcaption>
+        </figure>
+      </article>
+
+    </section>
+
+    <section id="form-section" aria-labelledby="form-heading">
+      <h2 id="form-heading">User Information Form</h2>
+      <form action="#" method="post" novalidate>
+
+        <!-- Personal Information Fieldset -->
+        <fieldset>
+          <legend>Personal Information</legend>
+
+          <label for="fullname">Full Name:</label><br />
+          <input 
+            type="text" 
+            id="fullname" 
+            name="fullname" 
+            placeholder="Full Name" 
+            minlength="3" 
+            required 
+            autocomplete="name" 
+            aria-required="true" /><br /><br />
+
+          <label for="email">Email Address:</label><br />
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            placeholder="admin@mail.com" 
+            required 
+            autocomplete="email" 
+            aria-required="true" /><br /><br />
+
+          <label for="phone">Phone Number:</label><br />
+          <input 
+            type="tel" 
+            id="phone" 
+            name="phone" 
+            placeholder="+251-900000000" 
+            pattern="\+?[0-9\s\-\.]{7,15}" 
+            title="Phone number with country code, 7 to 15 digits" /><br /><br />
+
+          <label for="dob">Date of Birth:</label><br />
+          <input type="date" id="dob" name="dob" required aria-required="true" /><br /><br />
+
+        </fieldset>
+
+        <!-- Account Details Fieldset -->
+        <fieldset>
+          <legend>Account Details</legend>
+
+          <label for="username">Username:</label><br />
+          <input 
+            type="text" 
+            id="username" 
+            name="username" 
+            placeholder="Choose a username" 
+            minlength="5" 
+            required 
+            aria-required="true" 
+            autocomplete="username" /><br /><br />
+
+          <label for="password">Password:</label><br />
+          <input 
+            type="password" 
+            id="password" 
+            name="password" 
+            minlength="8" 
+            required 
+            aria-required="true" 
+            autocomplete="new-password" 
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+            title="At least 8 characters, including uppercase, lowercase, and a digit" /><br /><br />
+
+          <label for="confirm-password">Confirm Password:</label><br />
+          <input 
+            type="password" 
+            id="confirm-password" 
+            name="confirm-password" 
+            minlength="8" 
+            required 
+            aria-required="true" 
+            autocomplete="new-password" /><br /><br />
+
+        </fieldset>
+
+        <!-- Preferences Fieldset -->
+        <fieldset>
+          <legend>Preferences</legend>
+
+          <label for="newsletter">Subscribe to newsletter:</label>
+          <input type="checkbox" id="newsletter" name="newsletter" checked /><br /><br />
+
+          <label for="contact-method">Preferred contact method:</label><br />
+          <select id="contact-method" name="contact-method" required aria-required="true">
+            <option value="" disabled selected>Select an option</option>
+            <option value="email">Email</option>
+            <option value="phone">Phone</option>
+            <option value="none">No contact</option>
+          </select><br /><br />
+
+          <label for="comments">Additional Comments:</label><br />
+          <textarea 
+            id="comments" 
+            name="comments" 
+            rows="4" 
+            cols="40" 
+            placeholder="Enter your comments here..." 
+            minlength="10">
+          </textarea><br /><br />
+
+        </fieldset>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2025 Enhanced HTML5 Content &amp; Forms Assignment</p>
+    <address>
+      Contact: <a href="mailto:ermiyasgera@gmail.com">ermiyasgera@gmail.com</a>
+    </address>
+  </footer>
+
+</body>
+</html>
